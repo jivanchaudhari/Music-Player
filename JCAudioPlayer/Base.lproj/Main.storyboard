@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1jh-o6-4Rg">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCa-Kh-vgG">
+                                <rect key="frame" x="70" y="501" width="460" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhd-io-jtM">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="00a-FL-tTY"/>
+                                        </constraints>
+                                        <state key="normal" image="play"/>
+                                        <connections>
+                                            <action selector="actionPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Fn-XF-p9l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXM-7w-hdE">
+                                        <rect key="frame" x="230" y="0.0" width="230" height="40"/>
+                                        <state key="normal" image="1"/>
+                                        <connections>
+                                            <action selector="actionStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HAY-8l-eIe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UXM-7w-hdE" firstAttribute="width" secondItem="Fhd-io-jtM" secondAttribute="width" id="KRT-YX-l1w"/>
+                                    <constraint firstItem="UXM-7w-hdE" firstAttribute="height" secondItem="Fhd-io-jtM" secondAttribute="height" id="luF-VQ-PXy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1jh-o6-4Rg" secondAttribute="bottom" id="HdU-VZ-2GH"/>
+                            <constraint firstItem="1jh-o6-4Rg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Vt2-jy-7tx"/>
+                            <constraint firstItem="PCa-Kh-vgG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Xxe-KI-1aK"/>
+                            <constraint firstItem="PCa-Kh-vgG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z6e-QE-Yex"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1jh-o6-4Rg" secondAttribute="trailing" constant="-20" id="eIi-Ld-XUf"/>
+                            <constraint firstItem="1jh-o6-4Rg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fDS-GW-1mB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PCa-Kh-vgG" secondAttribute="bottom" constant="59" id="nTI-ar-DnQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonPlay" destination="Fhd-io-jtM" id="fMd-Yl-pXd"/>
+                        <outlet property="imageArtWork" destination="1jh-o6-4Rg" id="WTh-yQ-3SY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="50" height="50"/>
+        <image name="play" width="50" height="37"/>
+    </resources>
+</document>
