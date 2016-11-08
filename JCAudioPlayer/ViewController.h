@@ -15,13 +15,27 @@
     AVAudioPlayer *audioPlayer;
     
     BOOL isPlaying;
+    UISlider *slider;
+    NSTimer *timer;
     
 }
 @property (strong, nonatomic) IBOutlet UIImageView *imageArtWork;
 
+@property (strong, nonatomic) IBOutlet UISlider *sliderDuration;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelTitle;
+
 @property (strong, nonatomic) IBOutlet UIButton *buttonPlay;
+@property (strong, nonatomic) IBOutlet UILabel *labelArites;
+@property (strong, nonatomic) IBOutlet UILabel *labelAlbumName;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelSliderValueMinimum;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelSliderMaximumValue;
+
 
 - (IBAction)actionPlay:(id)sender;
+- (IBAction)sliderControl:(id)sender;
 
 
 - (IBAction)actionStop:(id)sender;
